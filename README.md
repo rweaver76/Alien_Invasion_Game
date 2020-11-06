@@ -1,1 +1,1 @@
-# Alien_Invasion_Game
+# Alien_Invasion_Game - personal project for learning python.
