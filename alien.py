@@ -22,6 +22,13 @@ class Alien(Sprite):
         #Store the alien's exact horizontal position.
         self.x = float(self.rect.x)
 
+    def create_alien(self, alien_number, row_number):
+        #Create an alien and place it in the row.
+        alien_width, alien_height = self.rect.size
+        self.x = alien_width + 2 * alien_width * alien_number
+        self.rect.x = self.x
+        self.rect.y = self.rect.height + 2 * self.rect.height * row_number
+
     def update(self):
         #Move the alien right or left.
         self.x += (self.settings.alien_speed * self.settings.fleet_direction)
